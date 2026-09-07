@@ -27,3 +27,7 @@ Tambahkan  baris kode
 `const { tambahBarang, loading } = useData();`
 
 Untuk mengirim data melalui form di awal fungsi dengan struktur `const {namaFungsi} = namaHooks`
+
+Detail dan dokumenatsi dari alur data dan custom hooks untuk supabase ditulis di file hooks masing masing menggunakan JSDoc.
+
+

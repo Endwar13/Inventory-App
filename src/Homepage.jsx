@@ -1,6 +1,6 @@
-import {Stat, TabelStat} from "./components/Stat.jsx";
+import {Stat, TabelStat} from "./components/Stat.jsx"; // mengimport komponen Stat dan TabelStat dari file Stat.jsx
 import { ItemCost, TotalItemCost } from "./components/MultiTable.jsx"; 
-import { useData } from './hooks/useData.js';
+import { useData } from './hooks/useData.js'; //import custom hook useData from hooks/useData.js
 
 
 function HomePage() {
