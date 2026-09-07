@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+.table :where(thead, tbody, tfoot) :where(tr, th, td) {
+  border-bottom-width: 1px; /* Ubah ketebalan garis horizontal */
+  border-color: var(--fallback-bc, currentColor); /* Atau tentukan warna spesifik */
+  
+} 
