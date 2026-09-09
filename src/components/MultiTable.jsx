@@ -1,16 +1,16 @@
 export function ItemCost({ item }) {
     return (
         <>
-            <div className="overflow-hidden w-[50%] h-full  rounded-box border border-black bg-slate-300">
-                <table className="table table-zebra  w-full ">
+            <div className="overflow-hidden w-[50%] h-full  rounded-box border border-zinc-200 bg-white">
+                <table className="table  w-full ">
                     {/* head */}
-                    <thead className="bg-sky-300 text-black">
+                    <thead className="bg-zinc-50 text-zinc-600 font-medium border-b border-zinc-200">
                     <tr>
                         <th>Nama</th>
                         <th>Harga</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="text-zinc-700 bg-white">
                     {item.map((item, index) => (
                         <tr key={item.id || index}>
                             <td>{item.Nama}</td>
@@ -26,16 +26,16 @@ export function ItemCost({ item }) {
 
 export function TotalItemCost({ item }) {
     return (
-        <div className="overflow-hidden w-[50%] h-full rounded-box border border-black bg-slate-300">
-            <table className="table table-zebra w-full ">
+        <div className="overflow-hidden w-[50%] h-full rounded-box border border-zinc-200 bg-white">
+            <table className="table w-full ">
                 {/* head */}
-                <thead className="bg-sky-300 text-black">
+                <thead className="bg-zinc-50 text-zinc-600 font-medium border-b border-zinc-200">
                     <tr>
                         <th>Nama</th>
                         <th>Harga Total</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-zinc-700 bg-white">
                     {Array.isArray(item) && item.map((singleItem, index) => {
                         // Hitung total cost untuk setiap objek di dalam array
                         const jumlah = parseInt(singleItem.Jumlah) || 0;

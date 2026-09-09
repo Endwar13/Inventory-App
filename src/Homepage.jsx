@@ -15,12 +15,12 @@ const { items, loading } = useData();
       <div className="flex items-center justify-center m-4 shadow rounded ">
         <Stat />
       </div>
-      <span className="flex items-center justify-content border-b-2 border-neutral-800 p-2 mx-2 text-xl font-[Plus Jakarta Sans]"> Tabel Item</span>
+      <span className="flex items-center justify-content border-b-2 border-zinc-200 p-2 mx-2 text-xl font-[Plus Jakarta Sans]"> Tabel Item</span>
       <div className="card overflow-hidden m-2 shadow-4  border rounded-12">
        
         <TabelStat />
       </div>
-      <span className="flex items-center justify-content border-b-2 border-neutral-800 p-2 mx-2 text-xl"> General Data </span>
+      <span className="flex items-center justify-content border-b-2 border-zinc-200 p-2 mx-2 text-xl"> General Data </span>
 
       <div className="card-body  w-full flex flex-row p-2 gap-6 items-center justify-content">
         <ItemCost item={dataItems}/>

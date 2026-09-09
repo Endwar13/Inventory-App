@@ -18,9 +18,9 @@ export function Stat() {
   );
 
   return (
-    <div className="stats shadow-xl w-full bg-sky-100">
-      <div className="stat border-r-2 border-neutral-600">
-        <div className="stat-figure text-secondary">
+    <div className="stats shadow-sm border border-zinc-200 w-full bg-white">
+      <div className="stat border-r border-zinc-200">
+        <div className="stat-figure text-indigo-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -35,18 +35,18 @@ export function Stat() {
             ></path>
           </svg>
         </div>
-        <div className="stat-title text-black">Total Jenis Barang</div>
-        <div className="stat-value">{dataItems.length}</div>
+        <div className="stat-title text-zinc-500 font-medium">Total Jenis Barang</div>
+        <div className="stat-value text-zinc-900">{dataItems.length}</div>
       </div>
 
-      <div className="stat border-r-2 border-neutral-600">
-        <div className="stat-figure text-secondary"></div>
-        <div className="stat-title text-black">Total Unit Tersedia</div>
-        <div className="stat-value">{totalTersedia}</div>
+      <div className="stat border-r border-zinc-200">
+        <div className="stat-figure text-indigo-600"></div>
+        <div className="stat-title text-zinc-500 font-medium">Total Unit Tersedia</div>
+        <div className="stat-value text-zinc-900">{totalTersedia}</div>
       </div>
 
       <div className="stat">
-        <div className="stat-figure text-secondary">
+        <div className="stat-figure text-indigo-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -61,8 +61,8 @@ export function Stat() {
             ></path>
           </svg>
         </div>
-        <div className="stat-title text-black">Total Aset</div>
-        <div className="stat-value">
+        <div className="stat-title text-zinc-500 font-medium">Total Aset</div>
+        <div className="stat-value text-zinc-900">
           {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(totalAset)}
         </div>
       </div>
@@ -79,10 +79,10 @@ export function TabelStat() {
   const dataItems = items || [];
 
   return (
-    <div className="bg-slate-300 overflow-x-auto">
-      <table className="table table-zebra w-full rounded">
+    <div className="bg-white border border-zinc-200 overflow-x-auto rounded-xl">
+      <table className="table  w-full rounded">
         {/* head */}
-        <thead className="bg-sky-300 text-black">
+        <thead className="bg-zinc-50 text-zinc-600 font-medium border-b border-zinc-200">
           <tr>
             <th>No</th>
             <th>Nama Barang</th>
@@ -90,7 +90,7 @@ export function TabelStat() {
             <th>Jumlah</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-zinc-700 bg-white">
           {dataItems.map((item, index) => (
             <tr key={item.id || index}>
               <td>{index + 1}</td>

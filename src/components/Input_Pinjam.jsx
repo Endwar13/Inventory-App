@@ -31,7 +31,7 @@ export function InputPinjamForm() {
     };
 
     return (
-        <section className="card card-xl m-5 shadow-4 card-border rounded-box bg-indigo-300">
+        <section className="card card-xl m-5 shadow-sm border border-zinc-200 rounded-xl bg-white">
             <div className="card-body p-6 md:p-8">
                 <h2 className="text-2xl font-bold mb-4">Tambah Peminjaman Baru</h2>
                 <form onSubmit={handleTambahData} className="space-y-4">
@@ -93,7 +93,7 @@ export function InputPinjamForm() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`w-full bg-indigo-500 text-white py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-600'}`}
+                        className={`w-full bg-indigo-600 text-white py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-700'}`}
                     >
                         {loading ? 'Menyimpan...' : 'Tambah Data'}
                     </button>
@@ -113,9 +113,9 @@ export function TableHistory() {
     const dataRiwayat = riwayat || [];
 
     return (
-        <div className="bg-slate-300 border rounded overflow-x-auto m-5">
+        <div className="bg-white border border-zinc-200 rounded-xl shadow-sm overflow-x-auto m-5">
             <table className="table w-full rounded">
-                <thead className="bg-sky-300 text-black">
+                <thead className="bg-zinc-50 text-zinc-600 font-medium border-b border-zinc-200">
                     <tr>
                         <th>No</th>
                         <th>Waktu</th>
@@ -124,7 +124,7 @@ export function TableHistory() {
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-zinc-700 bg-white">
                     {/* Looping menggunakan dataRiwayat yang otomatis diperbarui */}
                     {dataRiwayat.map((item, index) => (
                         <tr key={item.id || index}>

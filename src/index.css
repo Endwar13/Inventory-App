@@ -8,7 +8,6 @@
 
 
 .table :where(thead, tbody, tfoot) :where(tr, th, td) {
-  border-bottom-width: 1px; /* Ubah ketebalan garis horizontal */
-  border-color: var(--fallback-bc, currentColor); /* Atau tentukan warna spesifik */
-  
+  border-bottom-width: 1px;
+  border-color: var(--color-zinc-200);
 } 

@@ -35,7 +35,7 @@ function InputPinjamForm() {
 
   return (
     <>
-    <section className="card card-xl m-5 shadow-4 card-border rounded-box bg-indigo-300">
+    <section className="card card-xl m-5 shadow-sm border border-zinc-200 rounded-xl bg-white">
         <div className="card-body p-6 md:p-8">
           <h2 className="text-2xl font-bold mb-4">Tambah Barang Baru</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -57,9 +57,8 @@ function InputPinjamForm() {
                 required
                 value={jenis}
                 onChange={(e) => setJenis(e.target.value)}
-                defaultValue="Pick a color" 
                 className="select w-full border rounded px-3 py-2">
-                     <option value="" disabled selected>Select a Type</option>
+                     <option value="" disabled>Select a Type</option>
                     <option value="Komponen">Komponen</option>
                     <option value="Tools">Tools</option>
                     <option value="Controller">Controller</option>
@@ -74,7 +73,6 @@ function InputPinjamForm() {
                 id="jumlah"
                 required
                 placeholder="Min: 1"
-                defaultValue={"Komponen"}
                 value={jumlah}
                 onChange={(e) => setJumlah(e.target.value)}
                 className="w-full border rounded px-3 py-2"
@@ -105,7 +103,7 @@ function InputPinjamForm() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full bg-indigo-500 text-white py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'}`}
+              className={`w-full bg-indigo-600 text-white py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-700'}`}
             >
               {loading ? 'Menambahkan...' : 'Tambah Data'}
             </button>
